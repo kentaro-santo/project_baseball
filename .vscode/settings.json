@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^python -c \"from pathlib import Path\np=Path\\(r'c:\\\\Users\\\\スコアボード\\\\Documents\\\\野球\\\\プロジェクト\\\\project_baseball\\\\01_山藤健太郎\\\\試合情報\\\\広島大学-広島工業大学_260524-080558\\.bacs-s'\\)\nprint\\('exists', p\\.exists\\(\\), 'size', p\\.stat\\(\\)\\.st_size\\)\nraw = p\\.read_bytes\\(\\)\nprint\\('first40', raw\\[:40\\]\\.hex\\(\\)\\)\nencs=\\['utf-8','utf-16','utf-16le','utf-16be','cp932','shift_jis','euc_jp','latin1','iso2022_jp'\\]\nfor enc in encs:\n    try:\n        text=raw\\.decode\\(enc\\)\n        print\\('---', enc, '---'\\)\n        print\\(text\\[:300\\]\\.encode\\('unicode_escape'\\)\\.decode\\('ascii'\\)\\)\n    except Exception as e:\n        print\\('---', enc, 'ERROR', e\\)\n\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}
