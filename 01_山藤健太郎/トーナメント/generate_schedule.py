@@ -10,7 +10,7 @@ plt.rcParams['font.family'] = ['Yu Gothic', 'MS Gothic', 'Meiryo', 'sans-serif']
 fig, ax = plt.subplots(figsize=(15, 13))
 fig.patch.set_facecolor('white')
 ax.set_facecolor('white')
-ax.set_xlim(0, 15)
+ax.set_xlim(0, 15.5)
 ax.set_ylim(0, 14)
 ax.axis('off')
 
@@ -124,8 +124,8 @@ draw_box(ax, BX, 8.0, '第3試合敗者（E）', w=2.5, h=0.48, fc='#fee2e2', ec
 hline(ax, 13.8, 14.1, 11.0)
 hline(ax, 11.75, 14.1,  8.0)
 vline(ax, 14.1,  8.0, 11.0)
-hline(ax, 14.1, 14.4, 9.5)
-draw_box(ax, 14.65, 9.5, '三位', w=0.85, h=0.65,
+hline(ax, 14.1, 14.5, 9.5)
+draw_box(ax, 14.9, 9.5, '三位', w=0.85, h=0.65,
          fc='#fef9c3', ec='#ca8a04', fs=10)
 
 # 三位決定戦ラベル
@@ -149,7 +149,7 @@ col_x   = [0.65, 1.85, 3.35, 8.0, 13.5]
 rows = [
     ('1日目', '9:00',  '第1試合',              '岡山大学　vs　鳥取大学',                       '広島大学'),
     ('1日目', '11:30', '第2試合',              '広島大学　vs　島根大学',                       '第1試合敗者'),
-    ('1日目', '14:00', '第3試合',              '山口大学　vs　第1試合勝者',                    '広島大学'),
+    ('1日目', '14:00', '第3試合',              '山口大学　vs　第1試合勝者（A）',               '広島大学'),
     ('2日目', '9:00',  '第1試合',              '第1試合敗者（C）　VS　第2試合敗者（D）',            '広島大学'),
     ('2日目', '11:30', '第2試合',              '第3試合勝者（G）　VS　第2試合勝者（B）',       '2日目第1試合敗者'),
     ('2日目', '14:00', '第3試合',              '勝者（F）　VS　第3試合敗者（E）',                        '広島大学'),
@@ -214,11 +214,15 @@ vline(ax, 12.0, bot, TABLE_Y + 0.02, color='#cbd5e1', lw=1.2)
 #  フッター注記
 # ============================================================
 ax.text(7.5, bot - 0.38,
-        '※ 二日目の第二試合の後に表彰式を行います。',
+        '※ 二日目の第二試合の後に表彰式を行います。（1位、2位のみ）',
         ha='center', va='center', fontsize=12, color='#1e293b',
         fontweight='bold')
 ax.text(7.5, bot - 0.75,
         '※ 補助の内容は（ボールボーイ２名・ファールボーイ２名・塁審３名）',
+        ha='center', va='center', fontsize=12, color='#1e293b',
+        fontweight='bold')
+ax.text(7.5, bot - 1.12,
+        '※ アナウンス、SBOなどの本部運営はすべて広島大学が行います。',
         ha='center', va='center', fontsize=12, color='#1e293b',
         fontweight='bold')
 
